@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carrel 座位預約</title>
+  <meta name="description" content="大學圖書館自習座位預約 Prototype：選日期時段、在閱覽室平面圖上選位、報到與管理預約。">
+  <meta name="theme-color" content="#1B2A47">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B2A47'/%3E%3Crect x='7' y='9' width='18' height='10' rx='1.5' fill='none' stroke='white' stroke-width='2'/%3E%3Crect x='11' y='22' width='10' height='4' rx='2' fill='%2350B48A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared drawing definitions: plan hatching and the small icon set -->
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="hatch-booked" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <rect width="6" height="6" fill="#E6E9EE"/>
+        <line x1="0" y1="0" x2="0" y2="6" stroke="#9AA3B2" stroke-width="1.6"/>
+      </pattern>
+      <pattern id="hatch-stack" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+        <rect width="5" height="5" fill="#F4F6F8"/>
+        <line x1="0" y1="0" x2="0" y2="5" stroke="#8792A6" stroke-width="1"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div id="app"></div>
+  <div class="toast-region" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
